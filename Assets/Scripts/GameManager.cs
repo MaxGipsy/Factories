@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Производство красных ресурсов
     private void ProductionOfRed()
     {
-        if ((Time.time - timeStartRed >= 3) && (Red.Count < storageCapacity) && (BlueForRed.Count > 0))
+        if ((Time.time - timeStartRed >= 3) && (Red.Count < storageCapacity) && (BlueForRed.Count > 0) && (GreenForRed.Count > 0))
         {
             BlueForRed[BlueForRed.Count - 1].GetComponent<Product>().moveToFactoryFlag = true;
             BlueForRed[BlueForRed.Count - 1].GetComponent<Product>().moveTo = new Vector3(-15f, 2.5f, 17f);
